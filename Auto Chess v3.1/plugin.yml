@@ -1,0 +1,24 @@
+name: AutoChess
+main: fmiska22.autochess.main
+version: 1.0
+api-version: 1.16
+commands:
+    AutoChess:
+        description: AutoChess commands!
+        permissions: AutoChess.Use
+    AutoChessSetup:
+        description: AutoChess setup commands!
+        permissions: AutoChess.Setup
+        permission-message: No permission
+permissions:
+    AutoChess.*:
+        description: Gives access to all AutoChess commands!
+        children:
+            AutoChess.Use: true
+            AutoChess.Setup: true
+    AutoChess.Use:
+        description: Gives access to join/leave AutoChess queue!
+        default: true
+    AutoChess.Setup:
+        description: Gives access to setup AutoChess arenas!
+        default: op
